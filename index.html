@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>✿ Kawaii Robux Cloud ✿ — Free R$ Generator (Prank)</title>
+<meta name="description" content="A cute joke page that pretends to generate free Robux. It is a prank — nothing is generated, nothing is collected, nothing is sent anywhere." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Sniglet:wght@800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="sky" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <div class="stars" id="stars"></div>
+</div>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-cat">🐱</span>
+    <span class="brand-text">Kawaii<span class="brand-dot">·</span>Robux<span class="brand-cloud">Cloud</span></span>
+  </div>
+  <nav class="badges">
+    <span class="badge">✿ 100% Fake</span>
+    <span class="badge">♡ 0 Passwords</span>
+    <span class="badge">☁ Vibes Only</span>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ STEP 1 : the bait ============ -->
+  <section class="card step" id="step-1" data-step="1">
+    <p class="kicker">✧･ﾟ: *✧ certified bogus ✧*:･ﾟ✧</p>
+    <h1>Free R$ Generator <span class="wobble">🎀</span></h1>
+    <p class="sub">Hyper-adorable cloud technology that turns pure serotonin into Robux. Allegedly.</p>
+
+    <div class="counter" role="img" aria-label="Robux allegedly generated today">
+      <span class="counter-num" id="globalCounter">0</span>
+      <span class="counter-label">R$ generated today (definitely not made up)</span>
+    </div>
+
+    <label class="field">
+      <span class="field-label">your roblox username</span>
+      <input id="username" type="text" maxlength="24" autocomplete="off" spellcheck="false"
+             placeholder="e.g. StrawberryMilk_99" />
+    </label>
+    <p class="hint">↑ stays in your browser. never sent, never stored, never anywhere. pinky promise 🤙</p>
+
+    <p class="field-label pick-label">pick your bag</p>
+    <div class="amounts" id="amounts" role="radiogroup" aria-label="Robux amount">
+      <button class="amount" role="radio" aria-checked="false" data-amt="800">800 R$<small>starter cutie</small></button>
+      <button class="amount" role="radio" aria-checked="false" data-amt="4500">4,500 R$<small>fancy fit</small></button>
+      <button class="amount" role="radio" aria-checked="false" data-amt="17000">17,000 R$<small>menace</small></button>
+      <button class="amount" role="radio" aria-checked="false" data-amt="999999">999,999 R$<small>ok calm down</small></button>
+    </div>
+
+    <button class="cta" id="startBtn">✨ Generate my Robux ✨</button>
+    <p class="micro">no download · no survey · no soul required</p>
+  </section>
+
+  <!-- ============ STEP 2 : the cat check ============ -->
+  <section class="card step hidden" id="step-2" data-step="2">
+    <h2>Are you a human? 🐾</h2>
+    <p class="sub">Our security kitty needs to check. Tap every square with a <b>cat</b> in it.</p>
+    <div class="grid" id="catGrid" role="group" aria-label="cat verification grid"></div>
+    <button class="cta" id="verifyBtn" disabled>Verify uwu</button>
+    <p class="micro" id="verifyHint">select at least 3 kitties</p>
+  </section>
+
+  <!-- ============ STEP 3 : the theatre ============ -->
+  <section class="card step hidden" id="step-3" data-step="3">
+    <h2 id="loadTitle">Injecting cuteness… 🫧</h2>
+    <div class="cat-loader" aria-hidden="true">
+      <div class="cat-face">
+        <div class="ear l"></div><div class="ear r"></div>
+        <div class="eye l"></div><div class="eye r"></div>
+        <div class="blush l"></div><div class="blush r"></div>
+        <div class="mouth"></div>
+      </div>
+    </div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="bar">
+      <div class="bar-fill" id="barFill"></div>
+      <span class="bar-pct" id="barPct">0%</span>
+    </div>
+    <ul class="console" id="console" aria-live="polite"></ul>
+  </section>
+
+  <!-- ============ STEP 4 : the reveal ============ -->
+  <section class="card step hidden reveal" id="step-4" data-step="4">
+    <div class="big-cat">😼</div>
+    <h2 class="reveal-title">it's a prank<span class="wobble">💖</span></h2>
+    <p class="reveal-lead">There is no generator. There never is.</p>
+    <p class="reveal-body">
+      Hi <b id="revealName">friend</b> — you did not receive
+      <b id="revealAmt">0</b> R$, because free Robux generators are <b>always</b> fake.
+      Every real one wants your password, your account, or your card. This one wanted a laugh.
+    </p>
+    <ul class="rules">
+      <li>🔒 Roblox will <b>never</b> ask for your password outside roblox.com</li>
+      <li>🎣 "Generators", "R$ hacks" and free-gift DMs are phishing, 100% of the time</li>
+      <li>🛡️ Turn on 2-Step Verification in Roblox → Settings → Security</li>
+      <li>💸 The only real Robux comes from Roblox itself</li>
+    </ul>
+    <p class="receipt">Data collected by this page: <b>none</b>. Requests sent: <b>zero</b>. Everything above happened inside your own browser and is gone on refresh.</p>
+    <div class="reveal-actions">
+      <button class="cta" id="againBtn">↺ prank someone else</button>
+      <button class="ghost" id="copyBtn">🔗 copy link</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><b>This is a parody / prank page.</b> It is not affiliated with, endorsed by, or connected to Roblox Corporation. No Robux exist here. No account details are requested, collected, transmitted, or stored.</p>
+  <p class="made">made with 🍡 and zero malicious intent</p>
+</footer>
+
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+<script src="script.js"></script>
+</body>
+</html>
